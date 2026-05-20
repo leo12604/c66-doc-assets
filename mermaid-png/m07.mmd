@@ -1,0 +1,41 @@
+graph TB
+    subgraph 入口
+    LP[基礎體驗<br/>啟動 / 首屏載入]
+    end
+
+    subgraph 內容循環
+    CC[內容消費<br/>Feed / 沉浸式 / 詳情 / 合集]
+    CR[內容創作<br/>圖文 / 影片 / 合集]
+    SI[社交互動<br/>讚 / 評論 / 分享 / 收藏 / 追蹤]
+    end
+
+    subgraph 留存引擎
+    TR[任務與獎勵<br/>每日 / 連續 / 領獎 / 財富中心]
+    end
+
+    subgraph 召回系統
+    NT[通知與召回<br/>通知中心 / 全場景訊息 / 紅點]
+    end
+
+    subgraph 用戶資產
+    PC[個人中心<br/>自己主頁 / 他人主頁 / 編輯個人資料]
+    end
+
+    subgraph 拉新運營
+    MA[營銷活動<br/>裂變 / 主題 / IP 合作]
+    GP[遊戲精選<br/>GamePicks / 遊戲偏好分析]
+    end
+
+    LP --> CC
+    CC --> SI
+    SI --> CR
+    CR --> CC
+    TR --> CC
+    TR --> CR
+    TR --> SI
+    NT --> CC
+    NT --> PC
+    SI --> PC
+    MA --> CC
+    MA --> CR
+    GP --> CC
